@@ -12,18 +12,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tupiphp/framework.git",
-                "reference": "69ec65bc49d2364338106de27d632f504b882c8d"
+                "reference": "e7a7093a2b6b19841338fa6294100e0c8a1b26f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tupiphp/framework/zipball/69ec65bc49d2364338106de27d632f504b882c8d",
-                "reference": "69ec65bc49d2364338106de27d632f504b882c8d",
+                "url": "https://api.github.com/repos/tupiphp/framework/zipball/e7a7093a2b6b19841338fa6294100e0c8a1b26f8",
+                "reference": "e7a7093a2b6b19841338fa6294100e0c8a1b26f8",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2.5"
             },
             "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Tupi\\": "src/Tupi/"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -40,7 +45,7 @@
                 "framework",
                 "tupi"
             ],
-            "time": "2020-05-11T15:22:56+00:00"
+            "time": "2020-05-11T19:12:37+00:00"
         }
     ],
     "packages-dev": [],
