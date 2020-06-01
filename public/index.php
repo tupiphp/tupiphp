@@ -9,9 +9,11 @@
 |
 */
 $minVersionPHP = '7.2';
+
 if (version_compare(phpversion(), $minVersionPHP, '<')) {
     die("Your PHP version must be {$minVersionPHP} or higher. Current version: " . phpversion());
 }
+
 unset($minVersionPHP);
 
 /*
@@ -24,7 +26,13 @@ unset($minVersionPHP);
 |
 */
 
-require __DIR__.'/../vendor/autoload.php';
+const COMPOSER_PATH = __DIR__.'/../vendor/autoload.php';
+
+if (! is_file(COMPOSER_PATH)) {
+	die("Vendor folder does not exist");
+}
+
+require COMPOSER_PATH;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +43,7 @@ require __DIR__.'/../vendor/autoload.php';
 |
 */
 
-$app = new Tupi\Application(APP_PATH);
+$app = new Tupi\Application(__DIR__);
 
 /*
 |---------------------------------------------------------------
